@@ -9,12 +9,12 @@ public class HelloWorld {
 		// create an object of Scanner
 		Scanner input = new Scanner(System.in);
 		
-        System.out.print("Enter number of location (N): ");
-        // take integer input from the user
-        int iNumberLocation = input.nextInt();
+		System.out.print("Enter number of location (N): ");
+		// take integer input from the user
+		int iNumberLocation = input.nextInt();
 
-        // initialize the 2D array
-        aLocationData = new String[iNumberLocation][6];
+		// initialize the 2D array
+		aLocationData = new String[iNumberLocation][6];
         
         //loop N times to ask user for rainfall data of each location
         for(int i=0; i<iNumberLocation; i++) {
@@ -53,29 +53,29 @@ public class HelloWorld {
 	}
 	
 	static double getMonthSum(int iMonth) {
-    	double dMonthSum = 0.0;
-    	// loop the aLocationData data
-        for(int i=0; i<aLocationData.length; i++) {
-        	String[] aRainfallData = aLocationData[i];
+		double dMonthSum = 0.0;
+		// loop the aLocationData data
+		for(int i=0; i<aLocationData.length; i++) {
+			String[] aRainfallData = aLocationData[i];
 
-            // get rainfall data for the month
-        	String sRainfallData = aRainfallData[iMonth];
-            // sum for X
-        	dMonthSum += Double.parseDouble(sRainfallData);
-        }
-        return dMonthSum;
+		    // get rainfall data for the month
+			String sRainfallData = aRainfallData[iMonth];
+		    // sum for X
+			dMonthSum += Double.parseDouble(sRainfallData);
+		}
+		return dMonthSum;
 	}
 	
 	static double getLocationSum(int iLocation) {
-        // get rainfall data for the location first
-    	String[] aRainfallData = aLocationData[iLocation-1];
-    	double dLocationSum = 0.0;
-    	// loop the above data
-        for(int j=0; j<aRainfallData.length; j++) {
-        	String sRainfallData = aRainfallData[j];
-            // sum for Y
-        	dLocationSum += Double.parseDouble(sRainfallData);
-        }
-        return dLocationSum;
+		// get rainfall data for the location first
+		String[] aRainfallData = aLocationData[iLocation-1];
+		double dLocationSum = 0.0;
+		// loop the above data
+		for(int j=0; j<aRainfallData.length; j++) {
+			String sRainfallData = aRainfallData[j];
+		    // sum for Y
+			dLocationSum += Double.parseDouble(sRainfallData);
+		}
+		return dLocationSum;
 	}
 }
