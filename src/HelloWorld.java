@@ -8,14 +8,14 @@ public class HelloWorld {
 	public static void main(String[] args) {
 		// create an object of Scanner
 		Scanner input = new Scanner(System.in);
-		
+
 		System.out.print("Enter number of location (N): ");
 		// take integer input from the user
 		int iNumberLocation = input.nextInt();
 
 		// initialize the 2D array
 		aLocationData = new String[iNumberLocation][6];
-        
+
 		//loop N times to ask user for rainfall data of each location
 		for(int i=0; i<iNumberLocation; i++) {
 			System.out.print("Enter 6 months rainfall data for location "+(i+1)+", separated by comma: ");
