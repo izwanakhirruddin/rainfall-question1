@@ -16,30 +16,30 @@ public class HelloWorld {
 		// initialize the 2D array
 		aLocationData = new String[iNumberLocation][6];
         
-        //loop N times to ask user for rainfall data of each location
-        for(int i=0; i<iNumberLocation; i++) {
-	        System.out.print("Enter 6 months rainfall data for location "+(i+1)+", separated by comma: ");
-	        // take string input from the user
-	        String sRainfallData = input.next();
-	        // convert string above to 1D array for 6 months
-	        String[] aRainfallData = sRainfallData.split(",");
-	        // populate each location with the data above
-	        aLocationData[i] = aRainfallData;
-        }
-        
-        //ask user for X
-        System.out.print("Enter respective month (X): ");
-        int iMonth = input.nextInt();
-        //ask user for Y
-        System.out.print("Enter respective location of interest (Y): ");
-        int iLocation = input.nextInt();
-        
-        // show the result from X and Y
-        System.out.println(getMonthForInt(iMonth) + ": " + getMonthSum(iMonth) + " mm");
-        System.out.println("Location " + iLocation + ": " + getLocationSum(iLocation) + " mm");
+		//loop N times to ask user for rainfall data of each location
+		for(int i=0; i<iNumberLocation; i++) {
+			System.out.print("Enter 6 months rainfall data for location "+(i+1)+", separated by comma: ");
+			// take string input from the user
+			String sRainfallData = input.next();
+			// convert string above to 1D array for 6 months
+			String[] aRainfallData = sRainfallData.split(",");
+			// populate each location with the data above
+			aLocationData[i] = aRainfallData;
+		}
 
-        // closing the scanner object
-        input.close();
+		//ask user for X
+		System.out.print("Enter respective month (X): ");
+		int iMonth = input.nextInt();
+		//ask user for Y
+		System.out.print("Enter respective location of interest (Y): ");
+		int iLocation = input.nextInt();
+
+		// show the result from X and Y
+		System.out.println(getMonthForInt(iMonth) + ": " + getMonthSum(iMonth) + " mm");
+		System.out.println("Location " + iLocation + ": " + getLocationSum(iLocation) + " mm");
+
+		// closing the scanner object
+		input.close();
 	}
 
 	static String getMonthForInt(int num) {
